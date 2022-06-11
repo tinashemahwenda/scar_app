@@ -379,7 +379,7 @@ class Dashboard extends StatelessWidget {
                 children: [
                   AspectRatio(
                       aspectRatio: 18.0 / 11.0,
-                      child: Image.asset('assets/images/livestock.png')),
+                      child: Image.asset('assets/images/tractor.png')),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
                     child: Center(
@@ -387,7 +387,7 @@ class Dashboard extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: const [
                             Text(
-                              'Livestock',
+                              'Machinery',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 30),
                             ),
