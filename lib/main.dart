@@ -74,11 +74,12 @@ class Login extends StatelessWidget {
                   child: SizedBox(
                       width: 200,
                       height: 150,
-                      child: Image.asset('assets/images/account.png')),
+                      child: Image.asset('assets/images/farmer.png')),
                 ),
               ),
               const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15),
+                padding:
+                    EdgeInsets.only(right: 85, left: 85, top: 15, bottom: 0),
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -89,7 +90,7 @@ class Login extends StatelessWidget {
               ),
               const Padding(
                 padding:
-                    EdgeInsets.only(right: 15, left: 15, top: 15, bottom: 0),
+                    EdgeInsets.only(right: 85, left: 85, top: 15, bottom: 0),
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -371,20 +372,70 @@ class Dashboard extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(2, 12, 4, 8),
-              child: ElevatedButton(
-                onPressed: () {},
-                child: const Text('Projects'),
+            Card(
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AspectRatio(
+                      aspectRatio: 18.0 / 11.0,
+                      child: Image.asset('assets/images/livestock.png')),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+                    child: Center(
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: const [
+                            Text(
+                              'Livestock',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 30),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text(
+                              'Manage',
+                              style: TextStyle(color: Colors.grey),
+                            )
+                          ]),
+                    ),
+                  ),
+                ],
               ),
             ),
-            Padding(
-                padding: const EdgeInsets.fromLTRB(2, 12, 4, 8),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(primary: Colors.grey),
-                  child: const Text('Weather'),
-                ))
+            Card(
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AspectRatio(
+                      aspectRatio: 18.0 / 11.0,
+                      child: Image.asset('assets/images/weather.png')),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+                    child: Center(
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: const [
+                            Text(
+                              '12\u00b0C',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 30),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text(
+                              'Partly Cloud',
+                              style: TextStyle(color: Colors.grey),
+                            )
+                          ]),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ));
   }
